@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: data-processor
+  config:
+    import: "optional:consul:localhost:8500"
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      config:
+        name: dataprocessorconsul
+        enabled: true
+        format: PROPERTIES
+        prefix: data-processor
+        default-context: application
+        profile-separator: '/'
